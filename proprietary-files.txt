@@ -935,7 +935,6 @@ vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
 vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
@@ -949,9 +948,6 @@ vendor/lib64/libcomposer_ext.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
-vendor/lib64/libgralloc_extra.so
-vendor/lib64/libgralloc_metadata.so
-vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
@@ -994,6 +990,11 @@ vendor/etc/gralloc/dpu_aeu.xml|94355caa28c4d7609a53db8ed9ba179370c991b5
 vendor/etc/gralloc/gpu.xml|0f6cc052e256cbf18caa0972a88766f4a14a0cd6
 vendor/etc/gralloc/vpu.xml|df22091da7830747f2eeba1a00faf0b87bcb0402
 vendor/etc/mali_platform.config|94ff34a831e05876d8af800f09847c5f2a336bcd
+vendor/lib64/mt6835/libgpudataproducer.so:vendor/lib64/mt6789/libgpudataproducer.so;SYMLINK=vendor/lib64/libgpudataproducer.so|f20f05b052e1ec0a18e890a18a746d3f24a71da4
+vendor/lib64/libgralloc_extra.so|eaa9e29051539031177ef62bf6417f8a1af781d6
+vendor/lib64/libgralloc_metadata.so|4f8256b13af5d60636412ee9a8004b02b719010b
+vendor/lib64/libgralloctypes_mtk.so|cf50d1a9ebc7aa6301b62f0e6de8c0b4257ddcf4
+vendor/lib64/hw/mt6835/gralloc.common.so:vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so|a60f19e0f72088d354fc1235a4ad7dfacbd15ef7
 
 # Display (Mali) - from Nothing Phone (2a) (Pacman-B4.0-260225-1817).
 vendor/lib64/mt6886/arm.graphics-V3-ndk.so:vendor/lib64/mt6789/arm.graphics-V3-ndk.so;SYMLINK=vendor/lib64/arm.graphics-V3-ndk.so|34a267b511f2ac56573c2ea66deee9cb739eac37
