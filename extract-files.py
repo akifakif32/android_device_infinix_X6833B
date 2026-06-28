@@ -67,8 +67,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
         .replace_needed('libalsautils.so', 'libalsautils-v31.so')
-	.replace_needed('libhidlbase-v32.so', 'libhidlbase.so')
-	.replace_needed('libutils-v32.so', 'libutils.so'),
+        .replace_needed('libhidlbase-v32.so', 'libhidlbase.so')
+        .replace_needed('libutils-v32.so', 'libutils.so'),
     ('vendor/lib64/hw/mt6789/vendor.mediatek.hardware.camera.isphal@1.0-impl.so', 'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.camera.isphal@1.1-impl.so'): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
         .replace_needed('libbinder.so', 'libbinder-v32.so')
@@ -80,7 +80,8 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/mt6789/lib3a.sensors.color.so', 'vendor/lib64/mt6789/libaaa_ltm.so', 'vendor/lib64/lib3a.ae.pipe.so',
      'vendor/lib64/libSQLiteModule_VER_ALL.so'): blob_fixup()
         .add_needed('liblog.so'),
-    'vendor/lib64/mt6789/libmnl.so': blob_fixup()
+    'vendor/lib64/libmnl_mtk.so': blob_fixup()
+        .fix_soname()
         .add_needed('libcutils.so'),
     'vendor/lib64/mt6789/libmtkcam_stdutils.so': blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
@@ -131,6 +132,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/bin/mnld': blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
