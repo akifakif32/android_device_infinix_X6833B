@@ -40,5 +40,5 @@
     <dimen name="max_shade_window_blur_radius">23dp</dimen>
     
     <!-- Shift status bar content down to align with the camera cutout -->
-    <dimen name="status_bar_padding_top">30px</dimen>
+    <dimen name="status_bar_padding_top">24px</dimen>
 </resources>
