@@ -38,7 +38,7 @@
 
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">23dp</dimen>
-
-    <!-- Shift the status bar dynamic island down to center on the camera hole -->
-    <dimen name="dynamic_island_vertical_offset">2dp</dimen>
+    
+    <!-- Shift status bar content down to align with the camera cutout -->
+    <dimen name="status_bar_padding_top">30px</dimen>
 </resources>
