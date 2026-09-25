@@ -68,22 +68,18 @@
             <kctl name="DAC In Mux" value="Normal Path" />
             <kctl name="LOL Mux" value="Playback" />
             <kctl name="RCV Mux" value="Dual Voice Playback" />
-            <kctl name="Lineout Volume" value="6" />
-            <kctl name="Handset Volume" value="18" />
-            <kctl name="ADDA_DL_GAIN" value="32543" />
+            <kctl name="Handset Volume" value="5" />
         </path>
         <!--BSP: modify inversed spk1 XLQLHAEE-6 by jiaqiong.zhang 20220613 end-->
         <path name="dual_speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
             <kctl name="RCV Mux" value="Open" />
+            <kctl name="Handset Volume" value="5" />
         </path>
        <!--speaker output-->
         <path name="speaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
             <kctl name="LOL Mux" value="Playback" />
-            <kctl name="Lineout Volume" value="6" />
-            <kctl name="Handset Volume" value="18" />
-            <kctl name="ADDA_DL_GAIN" value="32543" />
         </path>
         <path name="speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
@@ -1283,20 +1279,12 @@
             <kctl name="UL5_CH2 ADDA_UL_CH2" value="0" />
         </path>
         <path name="ultrasound-proximity" value="turnon">
-            <kctl name="Ultrasound Custom Setting 4" value="1" />
-            <kctl name="Ultrasound Mode" value="2370" />
         </path>
         <path name="ultrasound-proximity" value="turnoff">
-            <kctl name="Ultrasound Mode" value="0"  />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnon">
-            <kctl name="Ultrasound Custom Setting 4" value="1" />
-            <kctl name="Ultrasound Mode" value="2350" />
-            <kctl name="Ultrasound Log Level" value="7" />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnoff">
-            <kctl name="Ultrasound Mode" value="0"  />
-            <kctl name="Ultrasound Log Level" value="7" />
         </path>
     </mixercontrol>
 </root>
