@@ -1,17 +1,33 @@
 #!/bin/bash
 
+REPO="akifakif32/infinity-x-patches"
+BRANCH="main"
 RET=0
-echo "- Applying fenrir compatiblity patches"
-cd system/core
-curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/system/core/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch | git am || {
-  RET=1
-  git am --abort >/dev/null 2>&1
+
+fetch_patch() {
+    gh api "repos/${REPO}/contents/$1?ref=${BRANCH}" \
+        --jq '.content' | base64 -d
 }
-curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/system/core/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch | git am || {
-  RET=1
-  git am --abort >/dev/null 2>&1
+
+echo "- Applying compatibility and security patches"
+
+echo "  -> Applying first patch"
+( cd system/fs/fs_mgr && fetch_patch "first.patch" | git am >/dev/null 2>&1 ) || {
+    RET=1
+    ( cd system/fs/fs_mgr && git am --abort >/dev/null 2>&1 )
 }
-cd ../../
+
+echo "  -> Applying second patch"
+( cd system/core && fetch_patch "second.patch" | git am >/dev/null 2>&1 ) || {
+    RET=1
+    ( cd system/core && git am --abort >/dev/null 2>&1 )
+}
+
+echo "  -> Applying third patch"
+( cd system/core && fetch_patch "third.patch" | git am >/dev/null 2>&1 ) || {
+    RET=1
+    ( cd system/core && git am --abort >/dev/null 2>&1 )
+}
 
 if [ $RET -ne 0 ]; then
   echo "ERROR: Patch is not applied! Maybe it's already patched, or you'll have to adapt it to this specific rom source?"
