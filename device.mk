@@ -52,6 +52,8 @@ PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
+    
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
