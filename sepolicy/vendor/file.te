@@ -35,3 +35,6 @@ type sysfs_wide_torch_file, fs_type, sysfs_type;
 
 # VMAX
 type aw87xxx_vmax, fs_type, sysfs_type;
+
+# DTS Audio
+type audio_vendor_data_file, file_type, data_file_type;

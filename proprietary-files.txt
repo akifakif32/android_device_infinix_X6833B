@@ -1015,6 +1015,46 @@ vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
+# DTS Audio
+vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_44.bin
+vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_48.bin
+vendor/etc/dts/beq44
+vendor/etc/dts/beq48
+vendor/etc/dts/ctc
+vendor/etc/dts/current_bluetooth44k
+vendor/etc/dts/current_bluetooth48k
+vendor/etc/dts/current_lineout48k
+vendor/etc/dts/current_speaker48k
+vendor/etc/dts/current_usb44k
+vendor/etc/dts/current_usb48k
+vendor/etc/dts/customer.cfg
+vendor/etc/dts/dts-eagle.lic
+vendor/etc/dts/dts_audio_settings
+vendor/etc/dts/games_accessory44
+vendor/etc/dts/games_accessory48
+vendor/etc/dts/games_speaker48
+vendor/etc/dts/movie_accessory44
+vendor/etc/dts/movie_accessory48
+vendor/etc/dts/movie_speaker48
+vendor/etc/dts/music_accessory44
+vendor/etc/dts/music_accessory48
+vendor/etc/dts/music_speaker48
+vendor/etc/dts/off_speaker48
+vendor/etc/init/dts.rc
+vendor/lib/libdts-eagle-shared.so
+vendor/lib/libdtsdsec.so
+vendor/lib/soundfx/libdtsaudio.so
+vendor/lib64/libdts-eagle-shared.so
+vendor/lib64/libdtsdsec.so
+vendor/lib64/soundfx/libdtsaudio.so
+
+# DTS Audio app (from DTS_CUSTOM_ROM_X6833B module)
+product/app/DtsAudio/DtsAudio.apk;PRESIGNED
+system/etc/default-permissions/default-com.transsion.dtsaudio.xml
+system/etc/permissions/dtsaudio.xml
+system/etc/sysconfig/config-com.transsion.dtsaudio.xml
+system/framework/dtsaudio.jar
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|6d6f8d841369b3661de4e9e5865410ee6afceafe
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc

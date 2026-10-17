@@ -14,3 +14,8 @@ rw_dir_file(hal_audio_default, sysfs_therm)
 hal_client_domain(hal_audio_default, hal_power)
 
 set_prop(hal_audio_default, vendor_mtk_audiohal_prop)
+
+# DTS Audio
+allow hal_audio_default audio_vendor_data_file:dir { search write add_name };
+allow hal_audio_default audio_vendor_data_file:file { read write create getattr open };
+get_prop(hal_audio_default, vendor_dts_audio_prop)

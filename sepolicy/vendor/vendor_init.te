@@ -18,3 +18,4 @@ set_prop(vendor_init, vendor_mtk_camera_prop)
 get_prop(vendor_init, vts_status_prop)
 
 rw_dir_file(vendor_init, sysfs_ged)
+set_prop(vendor_init, vendor_dts_audio_prop)

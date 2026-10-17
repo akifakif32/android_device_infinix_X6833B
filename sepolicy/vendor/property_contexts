@@ -35,3 +35,7 @@ persist.vendor.nfc.            u:object_r:vendor_nfc_prop:s0
 
 # TEE property
 vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trustonic_tee_prop:s0
+
+# DTS Audio
+vendor.dts.audio.                           u:object_r:vendor_dts_audio_prop:s0
+ro.vendor.dts.                              u:object_r:vendor_dts_audio_prop:s0
